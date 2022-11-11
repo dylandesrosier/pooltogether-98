@@ -1,0 +1,36 @@
+:root {
+  --bg: #111;
+  --font: #f7ede2;
+  --primary: #f28482;
+  --primary-dark: #794241;
+  --secondary: #84a59d;
+  --secondary-dark: #42534f;
+  --tertiary: #f5cac3;
+  --tertiary-dark: #7b5554;
+  --g-1: #2b8e00;
+  --g-2: #277d01;
+  --g-3: #1b5800;
+  --g-4: #0f3300;
+  --g-5: #071700;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #111;
+  color: #222;
+  font-family: monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}

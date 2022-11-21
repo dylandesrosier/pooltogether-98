@@ -1,5 +1,6 @@
 import { h } from "preact";
 import WalletConnection from "../../components/WalletConnection";
+import Balance from "./Balance";
 
 const PoolTogether = () => (
   <div style={{ maxWidth: 500 }} className="window">
@@ -13,6 +14,7 @@ const PoolTogether = () => (
     </div>
     <div class="window-body">
       <WalletConnection />
+      <Balance />
     </div>
   </div>
 );

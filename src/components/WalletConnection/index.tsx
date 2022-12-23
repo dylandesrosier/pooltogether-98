@@ -19,7 +19,7 @@ const WalletConnection = (props: { className?: string }) => {
             <p>{address}</p>
             <div className="flex-row">
               <span className="my-auto">
-                Network: {NETWORKS[chain?.id] || "-"}
+                Network: {NETWORKS[chain?.id || 1] || "-"}
               </span>
               <button
                 className="ml-auto"

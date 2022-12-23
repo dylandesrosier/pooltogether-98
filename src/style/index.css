@@ -34,3 +34,34 @@ body {
 #app {
   height: 100%;
 }
+
+.pb {
+  padding-bottom: 1rem;
+}
+
+.mb {
+  margin-bottom: 1rem;
+}
+
+.mt {
+  margin-top: 1rem;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}

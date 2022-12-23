@@ -1,20 +1,33 @@
 import { Fragment, h } from "preact";
-import { useAccount, useConnect } from "wagmi";
+import { useAccount, useConnect, useNetwork } from "wagmi";
+import classNames from "classnames";
+import { NETWORKS } from "../../constants/network";
 
-const WalletConnection = () => {
+const WalletConnection = (props: { className?: string }) => {
+  const { className } = props;
   const { connector: activeConnector, isConnected, address } = useAccount();
   const { connect, connectors, error, isLoading, pendingConnector } =
     useConnect();
+  const { chain } = useNetwork();
 
   return (
-    <fieldset>
-      <div className="window-body" style={{ textAlign: "center" }}>
+    <fieldset className={classNames(className)}>
+      <legend>Wallet</legend>
+      <div className="window-body">
         {isConnected ? (
           <Fragment>
             <p>{address}</p>
-            <button onClick={() => activeConnector?.disconnect()}>
-              Disconnect
-            </button>
+            <div className="flex-row">
+              <span className="my-auto">
+                Network: {NETWORKS[chain?.id] || "-"}
+              </span>
+              <button
+                className="ml-auto"
+                onClick={() => activeConnector?.disconnect()}
+              >
+                Disconnect
+              </button>
+            </div>
           </Fragment>
         ) : (
           <Fragment>

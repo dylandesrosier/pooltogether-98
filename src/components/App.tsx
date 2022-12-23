@@ -7,11 +7,12 @@ import {
   createClient,
   configureChains,
   defaultChains,
+  allChains,
 } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 import "98.css";
 
-const { chains, provider } = configureChains(defaultChains, [publicProvider()]);
+const { chains, provider } = configureChains(allChains, [publicProvider()]);
 
 const client = createClient({
   autoConnect: true,
@@ -43,7 +44,7 @@ const App = () => (
         }}
       >
         <Router>
-          <Route path="/pt" component={PoolTogether} />
+          <Route path="/" component={PoolTogether} />
         </Router>
       </div>
     </WagmiConfig>

@@ -20,6 +20,9 @@
       "build/"
     ]
   },
+  "engines": {
+    "node": "16.16"
+  },
   "dependencies": {
     "@pooltogether/v4-client-js": "^0.15.5",
     "@pooltogether/v4-pool-data": "^1.8.1",
